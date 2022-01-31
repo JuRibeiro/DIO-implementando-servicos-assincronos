@@ -1,0 +1,63 @@
+<div class="card w-100 my-5">
+    <div class="card-body">
+        <h2 class="card-title text-center"> Formulário de usuários </h2>
+        <form action="" [formGroup]="userForm">
+            <div class="row my-4">
+                <div class="col-6">
+                    <!-- nome -->
+                    <div class="form-floating">
+                        <input type="text" class="form-control" formControlName="nome" id="nome" placeholder="Digite seu nome">
+                        <label for="floatinginput"> Nome </label>
+                    </div>
+                    <!-- /nome -->
+                </div>
+
+                <div class="col-6">
+                    <!-- sobrenome -->
+                    <div class="form-floating">
+                        <input type="text" class="form-control" formControlName="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome">
+                        <label for="floatinginput"> Sobrenome </label>
+                    </div>
+                    <!-- /sobrenome -->
+                </div> 
+            </div>
+
+                <div class="row my-4">
+                    <div class="col-6">
+                        <!-- idade -->
+                        <div class="form-floating">
+                            <input type="text" class="form-control" formControlName="idade" id="idade" placeholder="Digite sua idade">
+                            <label for="floatinginput"> Idade </label>
+                        </div>
+                        <!-- /idade -->
+                    </div>
+
+                    <div class="col-6">
+                        <!-- profissao -->
+                        <div class="form-floating">
+                            <input type="text" class="form-control" formControlName="profissao" id="profissao" placeholder="Digite sua profissão">
+                            <label for="floatinginput"> Profissão </label>
+                        </div>
+                        <!-- /profissao -->
+                    </div>
+                    
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-12 mt-4">
+                    <!-- Botão cancelar -->
+                        <button type="button" class="btn btn-outline-danger float-start">
+                            Cancelar
+                        </button>
+                    <!-- /Botão cancelar -->
+
+                    <!-- Botão enviar -->
+                        <button type="button" class="btn btn-outline-success float-end" (click)="actionButton()">
+                            Enviar
+                        </button>
+                    <!-- /Botão enviar -->
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
