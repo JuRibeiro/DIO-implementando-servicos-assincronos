@@ -1,0 +1,35 @@
+<!-- binding de classes -->
+<h1 [class.text-red]="textRed"> {{text}} </h1>
+<!-- interpolação (do componente para o HTML) -->
+
+
+<!-- <img src="{{imageUrl}}"> -->
+<!-- Property Binding -->
+<img [src]="imageUrl" [alt]="imageDesc">
+
+
+<!-- Event Binding -->
+<!-- <button (click)="clicou()"> Clique </button> -->
+<input #input (keyup)="clicou(input.value)">
+<!-- lendo o evento do teclado e exibindo na tela -->
+{{input.value}}
+
+<!-- binding de classes / class e style binding-->
+<button [attr.aria-label]="buttonText" [style.backgroundColor]="bgColor">
+    {{buttonText}}
+</button>
+
+
+<!-- Two way binding -->
+<input type="text" class="form-control" [(ngModel)]="textInput">
+<p class="text-default">
+    {{textInput}}
+</p>
+
+<app-button btnText="Enviar" (clickChildren)="clicouNoFIlho($event)" (click)="destroiComponente()">
+</app-button>
+
+<app-button btnText="Teste" (click)="incremento()">
+</app-button>
+
+<app-life-cycle [number]="number" *ngIf="!destroi"></app-life-cycle>
